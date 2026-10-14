@@ -1,0 +1,547 @@
+Analysis & Synthesis report for Projeto_AB1
+Wed Oct 14 15:19:41 2026
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Oct 14 15:19:41 2026       ;
+; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
+; Revision Name                   ; Projeto_AB1                                 ;
+; Top-level Entity Name           ; Projeto_Completo                            ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 35                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; Projeto_Completo   ; Projeto_AB1        ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                ; Library ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------+---------+
+; MeioSomador.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/MeioSomador.bdf        ;         ;
+; FullAdder.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/FullAdder.bdf          ;         ;
+; SubtratorCompleto.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/SubtratorCompleto.bdf  ;         ;
+; MeioSubtrator.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/MeioSubtrator.bdf      ;         ;
+; Subtrator4Bits.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/Subtrator4Bits.bdf     ;         ;
+; Comparator.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/Comparator.bdf         ;         ;
+; RaizQua.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/RaizQua.bdf            ;         ;
+; MUX2_1.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/MUX2_1.bdf             ;         ;
+; OF_soma.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/OF_soma.bdf            ;         ;
+; OF_sub.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/OF_sub.bdf             ;         ;
+; OF_mult.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/OF_mult.bdf            ;         ;
+; OF_max.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/OF_max.bdf             ;         ;
+; SINAL_soma.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/SINAL_soma.bdf         ;         ;
+; SINAL_sub.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/SINAL_sub.bdf          ;         ;
+; ula.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/ula.bdf                ;         ;
+; Comparator5bits.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/Comparator5bits.bdf    ;         ;
+; Somador5Bits.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/Somador5Bits.bdf       ;         ;
+; MUX2_1_5BITS.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/MUX2_1_5BITS.bdf       ;         ;
+; Min_5bits.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/Min_5bits.bdf          ;         ;
+; Max_5bits_zero_dif.bdf           ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/Max_5bits_zero_dif.bdf ;         ;
+; and_seletor_5bits.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/and_seletor_5bits.bdf  ;         ;
+; bloco_soma.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/bloco_soma.bdf         ;         ;
+; bloco_sUB.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/bloco_sUB.bdf          ;         ;
+; BLOCO_min.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/BLOCO_min.bdf          ;         ;
+; BLOCO_lt_eq.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/BLOCO_lt_eq.bdf        ;         ;
+; BLOCO_par.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/BLOCO_par.bdf          ;         ;
+; BLOCO_max.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/BLOCO_max.bdf          ;         ;
+; BLOCO_mult.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/BLOCO_mult.bdf         ;         ;
+; and_2seletor_3bits.bdf           ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/and_2seletor_3bits.bdf ;         ;
+; BLOCO_raiz.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/BLOCO_raiz.bdf         ;         ;
+; or_selection_5bits.bdf           ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/or_selection_5bits.bdf ;         ;
+; soma_1.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/soma_1.bdf             ;         ;
+; not_5bits.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/not_5bits.bdf          ;         ;
+; DEZENA_T.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/DEZENA_T.bdf           ;         ;
+; UNIDADE-DP7.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/UNIDADE-DP7.bdf        ;         ;
+; DP_UNIDADE.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/DP_UNIDADE.bdf         ;         ;
+; DP_T.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/DP_T.bdf               ;         ;
+; Display.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/Display.bdf            ;         ;
+; Projeto_Completo.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/Projeto_Completo.bdf   ;         ;
+; Mult3_2.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/Mult3_2.bdf            ;         ;
+; XOR_3Custom.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/monitoria_quartus/XOR_3Custom.bdf        ;         ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimate of Logic utilization (ALMs needed) ; 45         ;
+;                                             ;            ;
+; Combinational ALUT usage for logic          ; 65         ;
+;     -- 7 input functions                    ; 0          ;
+;     -- 6 input functions                    ; 24         ;
+;     -- 5 input functions                    ; 15         ;
+;     -- 4 input functions                    ; 15         ;
+;     -- <=3 input functions                  ; 11         ;
+;                                             ;            ;
+; Dedicated logic registers                   ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 35         ;
+;                                             ;            ;
+; Total DSP Blocks                            ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; A[3]~input ;
+; Maximum fan-out                             ; 20         ;
+; Total fan-out                               ; 363        ;
+; Average fan-out                             ; 2.69       ;
++---------------------------------------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                     ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                             ; Entity Name        ; Library Name ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+--------------------+--------------+
+; |Projeto_Completo                        ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 35   ; 0            ; |Projeto_Completo                                                                                               ; Projeto_Completo   ; work         ;
+;    |Display:buga|                        ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|Display:buga                                                                                  ; Display            ; work         ;
+;       |DEZENA_T:inst3|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|Display:buga|DEZENA_T:inst3                                                                   ; DEZENA_T           ; work         ;
+;       |DP_UNIDADE:inst5|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|Display:buga|DP_UNIDADE:inst5                                                                 ; DP_UNIDADE         ; work         ;
+;    |ula:uga|                             ; 57 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga                                                                                       ; ula                ; work         ;
+;       |BLOCO_lt_eq:inst18|               ; 6 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_lt_eq:inst18                                                                    ; BLOCO_lt_eq        ; work         ;
+;          |Comparator5bits:inst|          ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_lt_eq:inst18|Comparator5bits:inst                                               ; Comparator5bits    ; work         ;
+;             |Comparator:inst1|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_lt_eq:inst18|Comparator5bits:inst|Comparator:inst1                              ; Comparator         ; work         ;
+;             |Comparator:inst2|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_lt_eq:inst18|Comparator5bits:inst|Comparator:inst2                              ; Comparator         ; work         ;
+;             |Comparator:inst3|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_lt_eq:inst18|Comparator5bits:inst|Comparator:inst3                              ; Comparator         ; work         ;
+;             |Comparator:inst8|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_lt_eq:inst18|Comparator5bits:inst|Comparator:inst8                              ; Comparator         ; work         ;
+;       |BLOCO_max:inst13|                 ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_max:inst13                                                                      ; BLOCO_max          ; work         ;
+;          |Max_5bits_zero_dif:inst|       ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_max:inst13|Max_5bits_zero_dif:inst                                              ; Max_5bits_zero_dif ; work         ;
+;             |Subtrator4Bits:zbrrr|       ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_max:inst13|Max_5bits_zero_dif:inst|Subtrator4Bits:zbrrr                         ; Subtrator4Bits     ; work         ;
+;                |SubtratorCompleto:inst1| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_max:inst13|Max_5bits_zero_dif:inst|Subtrator4Bits:zbrrr|SubtratorCompleto:inst1 ; SubtratorCompleto  ; work         ;
+;                |SubtratorCompleto:inst2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_max:inst13|Max_5bits_zero_dif:inst|Subtrator4Bits:zbrrr|SubtratorCompleto:inst2 ; SubtratorCompleto  ; work         ;
+;                |SubtratorCompleto:inst3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_max:inst13|Max_5bits_zero_dif:inst|Subtrator4Bits:zbrrr|SubtratorCompleto:inst3 ; SubtratorCompleto  ; work         ;
+;                |SubtratorCompleto:inst4| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_max:inst13|Max_5bits_zero_dif:inst|Subtrator4Bits:zbrrr|SubtratorCompleto:inst4 ; SubtratorCompleto  ; work         ;
+;          |and_seletor_5bits:inst4|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_max:inst13|and_seletor_5bits:inst4                                              ; and_seletor_5bits  ; work         ;
+;       |BLOCO_min:u_min|                  ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_min:u_min                                                                       ; BLOCO_min          ; work         ;
+;          |Min_5bits:inst|                ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_min:u_min|Min_5bits:inst                                                        ; Min_5bits          ; work         ;
+;             |Comparator5bits:inst|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_min:u_min|Min_5bits:inst|Comparator5bits:inst                                   ; Comparator5bits    ; work         ;
+;                |Comparator:inst3|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_min:u_min|Min_5bits:inst|Comparator5bits:inst|Comparator:inst3                  ; Comparator         ; work         ;
+;          |and_seletor_5bits:inst2|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_min:u_min|and_seletor_5bits:inst2                                               ; and_seletor_5bits  ; work         ;
+;       |BLOCO_mult:inst15|                ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_mult:inst15                                                                     ; BLOCO_mult         ; work         ;
+;          |Mult3_2:wdwmfmw|               ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_mult:inst15|Mult3_2:wdwmfmw                                                     ; Mult3_2            ; work         ;
+;             |FullAdder:inst3|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_mult:inst15|Mult3_2:wdwmfmw|FullAdder:inst3                                     ; FullAdder          ; work         ;
+;          |and_seletor_5bits:inst3|       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|BLOCO_mult:inst15|and_seletor_5bits:inst3                                             ; and_seletor_5bits  ; work         ;
+;       |bloco_soma:inst14|                ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|bloco_soma:inst14                                                                     ; bloco_soma         ; work         ;
+;          |Somador5Bits:eqagbrn|          ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|bloco_soma:inst14|Somador5Bits:eqagbrn                                                ; Somador5Bits       ; work         ;
+;             |FullAdder:inst1|            ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|bloco_soma:inst14|Somador5Bits:eqagbrn|FullAdder:inst1                                ; FullAdder          ; work         ;
+;             |FullAdder:inst2|            ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|bloco_soma:inst14|Somador5Bits:eqagbrn|FullAdder:inst2                                ; FullAdder          ; work         ;
+;             |FullAdder:inst4|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|bloco_soma:inst14|Somador5Bits:eqagbrn|FullAdder:inst4                                ; FullAdder          ; work         ;
+;          |and_seletor_5bits:inst7|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|bloco_soma:inst14|and_seletor_5bits:inst7                                             ; and_seletor_5bits  ; work         ;
+;       |or_selection_5bits:inst24|        ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto_Completo|ula:uga|or_selection_5bits:inst24                                                             ; or_selection_5bits ; work         ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 74                          ;
+;     normal            ; 74                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 15                          ;
+;         5 data inputs ; 15                          ;
+;         6 data inputs ; 24                          ;
+; boundary_port         ; 35                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 4.51                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Processing started: Wed Oct 14 15:19:26 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Projeto_AB1 -c Projeto_AB1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file portaand.bdf
+    Info (12023): Found entity 1: portaAND
+Warning (12019): Can't analyze file -- file teste_bit.bdf is missing
+Info (12021): Found 1 design units, including 1 entities, in source file meiosomador.bdf
+    Info (12023): Found entity 1: MeioSomador
+Info (12021): Found 1 design units, including 1 entities, in source file fulladder.bdf
+    Info (12023): Found entity 1: FullAdder
+Info (12021): Found 1 design units, including 1 entities, in source file somador4bits.bdf
+    Info (12023): Found entity 1: Somador4Bits
+Info (12021): Found 1 design units, including 1 entities, in source file portaxor.bdf
+    Info (12023): Found entity 1: portaXOR
+Info (12021): Found 1 design units, including 1 entities, in source file subtratorcompleto.bdf
+    Info (12023): Found entity 1: SubtratorCompleto
+Info (12021): Found 1 design units, including 1 entities, in source file meiosubtrator.bdf
+    Info (12023): Found entity 1: MeioSubtrator
+Info (12021): Found 1 design units, including 1 entities, in source file subtrator4bits.bdf
+    Info (12023): Found entity 1: Subtrator4Bits
+Info (12021): Found 1 design units, including 1 entities, in source file comparator.bdf
+    Info (12023): Found entity 1: Comparator
+Info (12021): Found 1 design units, including 1 entities, in source file comparator4bits.bdf
+    Info (12023): Found entity 1: Comparator4bits
+Info (12021): Found 1 design units, including 1 entities, in source file raizqua.bdf
+    Info (12023): Found entity 1: RaizQua
+Info (12021): Found 1 design units, including 1 entities, in source file mux2_1.bdf
+    Info (12023): Found entity 1: MUX2_1
+Info (12021): Found 1 design units, including 1 entities, in source file of_signal_soma.bdf
+    Info (12023): Found entity 1: OF_Signal_Soma
+Info (12021): Found 1 design units, including 1 entities, in source file of_soma.bdf
+    Info (12023): Found entity 1: OF_soma
+Info (12021): Found 1 design units, including 1 entities, in source file of_sub.bdf
+    Info (12023): Found entity 1: OF_sub
+Info (12021): Found 1 design units, including 1 entities, in source file of_mult.bdf
+    Info (12023): Found entity 1: OF_mult
+Info (12021): Found 1 design units, including 1 entities, in source file of_max.bdf
+    Info (12023): Found entity 1: OF_max
+Info (12021): Found 1 design units, including 1 entities, in source file sinal_soma.bdf
+    Info (12023): Found entity 1: SINAL_soma
+Info (12021): Found 1 design units, including 1 entities, in source file sinal_sub.bdf
+    Info (12023): Found entity 1: SINAL_sub
+Info (12021): Found 1 design units, including 1 entities, in source file ula.bdf
+    Info (12023): Found entity 1: ula
+Info (12021): Found 1 design units, including 1 entities, in source file subtrator5bits.bdf
+    Info (12023): Found entity 1: Subtrator5Bits
+Info (12021): Found 1 design units, including 1 entities, in source file comparator5bits.bdf
+    Info (12023): Found entity 1: Comparator5bits
+Info (12021): Found 1 design units, including 1 entities, in source file somador5bits.bdf
+    Info (12023): Found entity 1: Somador5Bits
+Info (12021): Found 1 design units, including 1 entities, in source file mux2_1_5bits.bdf
+    Info (12023): Found entity 1: MUX2_1_5BITS
+Info (12021): Found 1 design units, including 1 entities, in source file min_5bits.bdf
+    Info (12023): Found entity 1: Min_5bits
+Info (12021): Found 1 design units, including 1 entities, in source file max_5bits_zero_dif.bdf
+    Info (12023): Found entity 1: Max_5bits_zero_dif
+Info (12021): Found 1 design units, including 1 entities, in source file mult3_+2.bdf
+    Info (12023): Found entity 1: Mult3_+2
+Info (12021): Found 1 design units, including 1 entities, in source file and_seletor_5bits.bdf
+    Info (12023): Found entity 1: and_seletor_5bits
+Info (12021): Found 1 design units, including 1 entities, in source file bloco_soma.bdf
+    Info (12023): Found entity 1: bloco_soma
+Info (12021): Found 1 design units, including 1 entities, in source file bloco_sub.bdf
+    Info (12023): Found entity 1: bloco_sUB
+Info (12021): Found 1 design units, including 1 entities, in source file bloco_min.bdf
+    Info (12023): Found entity 1: BLOCO_min
+Info (12021): Found 1 design units, including 1 entities, in source file bloco_lt_eq.bdf
+    Info (12023): Found entity 1: BLOCO_lt_eq
+Info (12021): Found 1 design units, including 1 entities, in source file bloco_par.bdf
+    Info (12023): Found entity 1: BLOCO_par
+Info (12021): Found 1 design units, including 1 entities, in source file bloco_max.bdf
+    Info (12023): Found entity 1: BLOCO_max
+Info (12021): Found 1 design units, including 1 entities, in source file bloco_mult.bdf
+    Info (12023): Found entity 1: BLOCO_mult
+Info (12021): Found 1 design units, including 1 entities, in source file and_2seletor_3bits.bdf
+    Info (12023): Found entity 1: and_2seletor_3bits
+Info (12021): Found 1 design units, including 1 entities, in source file bloco_raiz.bdf
+    Info (12023): Found entity 1: BLOCO_raiz
+Info (12021): Found 1 design units, including 1 entities, in source file or_selection_5bits.bdf
+    Info (12023): Found entity 1: or_selection_5bits
+Info (12021): Found 1 design units, including 1 entities, in source file soma_1.bdf
+    Info (12023): Found entity 1: soma_1
+Info (12021): Found 1 design units, including 1 entities, in source file not_5bits.bdf
+    Info (12023): Found entity 1: not_5bits
+Info (12021): Found 1 design units, including 1 entities, in source file dezena_t.bdf
+    Info (12023): Found entity 1: DEZENA_T
+Info (12021): Found 1 design units, including 1 entities, in source file unidade-dp7.bdf
+    Info (12023): Found entity 1: UNIDADE-DP7
+Info (12021): Found 1 design units, including 1 entities, in source file dp_unidade.bdf
+    Info (12023): Found entity 1: DP_UNIDADE
+Info (12021): Found 1 design units, including 1 entities, in source file dp_t.bdf
+    Info (12023): Found entity 1: DP_T
+Info (12021): Found 1 design units, including 1 entities, in source file display.bdf
+    Info (12023): Found entity 1: Display
+Info (12021): Found 1 design units, including 1 entities, in source file projeto_completo.bdf
+    Info (12023): Found entity 1: Projeto_Completo
+Info (12021): Found 1 design units, including 1 entities, in source file mult3_2.bdf
+    Info (12023): Found entity 1: Mult3_2
+Info (12021): Found 1 design units, including 1 entities, in source file xor_3custom.bdf
+    Info (12023): Found entity 1: XOR_3Custom
+Info (12127): Elaborating entity "Projeto_Completo" for the top level hierarchy
+Info (12128): Elaborating entity "ula" for hierarchy "ula:uga"
+Warning (275080): Converted elements in bus name "F" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "F[4..0]" to "F4..0"
+Warning (275080): Converted elements in bus name "F1" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "F1[4..0]" to "F14..0"
+Warning (275080): Converted elements in bus name "F2" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "F2[4..0]" to "F24..0"
+Warning (275080): Converted elements in bus name "F3" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "F3[4..0]" to "F34..0"
+Warning (275080): Converted elements in bus name "F4" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "F4[4..0]" to "F44..0"
+Info (12128): Elaborating entity "bloco_soma" for hierarchy "ula:uga|bloco_soma:inst14"
+Info (12128): Elaborating entity "OF_soma" for hierarchy "ula:uga|bloco_soma:inst14|OF_soma:inst4"
+Info (12128): Elaborating entity "Somador5Bits" for hierarchy "ula:uga|bloco_soma:inst14|Somador5Bits:eqagbrn"
+Info (12128): Elaborating entity "FullAdder" for hierarchy "ula:uga|bloco_soma:inst14|Somador5Bits:eqagbrn|FullAdder:inst3"
+Info (12128): Elaborating entity "MeioSomador" for hierarchy "ula:uga|bloco_soma:inst14|Somador5Bits:eqagbrn|MeioSomador:inst"
+Info (12128): Elaborating entity "SINAL_soma" for hierarchy "ula:uga|bloco_soma:inst14|SINAL_soma:inst5"
+Info (12128): Elaborating entity "and_seletor_5bits" for hierarchy "ula:uga|bloco_soma:inst14|and_seletor_5bits:inst7"
+Info (12128): Elaborating entity "BLOCO_max" for hierarchy "ula:uga|BLOCO_max:inst13"
+Info (12128): Elaborating entity "OF_max" for hierarchy "ula:uga|BLOCO_max:inst13|OF_max:inst2"
+Info (12128): Elaborating entity "Max_5bits_zero_dif" for hierarchy "ula:uga|BLOCO_max:inst13|Max_5bits_zero_dif:inst"
+Info (12128): Elaborating entity "Subtrator4Bits" for hierarchy "ula:uga|BLOCO_max:inst13|Max_5bits_zero_dif:inst|Subtrator4Bits:zbrrr"
+Info (12128): Elaborating entity "SubtratorCompleto" for hierarchy "ula:uga|BLOCO_max:inst13|Max_5bits_zero_dif:inst|Subtrator4Bits:zbrrr|SubtratorCompleto:inst2"
+Info (12128): Elaborating entity "MeioSubtrator" for hierarchy "ula:uga|BLOCO_max:inst13|Max_5bits_zero_dif:inst|Subtrator4Bits:zbrrr|MeioSubtrator:inst"
+Info (12128): Elaborating entity "MUX2_1_5BITS" for hierarchy "ula:uga|BLOCO_max:inst13|Max_5bits_zero_dif:inst|MUX2_1_5BITS:inst3"
+Info (12128): Elaborating entity "MUX2_1" for hierarchy "ula:uga|BLOCO_max:inst13|Max_5bits_zero_dif:inst|MUX2_1_5BITS:inst3|MUX2_1:inst6"
+Info (12128): Elaborating entity "Comparator5bits" for hierarchy "ula:uga|BLOCO_max:inst13|Max_5bits_zero_dif:inst|Comparator5bits:inst"
+Info (12128): Elaborating entity "Comparator" for hierarchy "ula:uga|BLOCO_max:inst13|Max_5bits_zero_dif:inst|Comparator5bits:inst|Comparator:inst3"
+Info (12128): Elaborating entity "BLOCO_mult" for hierarchy "ula:uga|BLOCO_mult:inst15"
+Info (12128): Elaborating entity "OF_mult" for hierarchy "ula:uga|BLOCO_mult:inst15|OF_mult:maemet"
+Info (12128): Elaborating entity "Mult3_2" for hierarchy "ula:uga|BLOCO_mult:inst15|Mult3_2:wdwmfmw"
+Info (12128): Elaborating entity "bloco_sUB" for hierarchy "ula:uga|bloco_sUB:tynbr"
+Info (12128): Elaborating entity "OF_sub" for hierarchy "ula:uga|bloco_sUB:tynbr|OF_sub:inst2"
+Info (12128): Elaborating entity "SINAL_sub" for hierarchy "ula:uga|bloco_sUB:tynbr|SINAL_sub:inst4"
+Info (12128): Elaborating entity "BLOCO_min" for hierarchy "ula:uga|BLOCO_min:u_min"
+Info (12128): Elaborating entity "Min_5bits" for hierarchy "ula:uga|BLOCO_min:u_min|Min_5bits:inst"
+Info (12128): Elaborating entity "BLOCO_raiz" for hierarchy "ula:uga|BLOCO_raiz:inst7"
+Info (12128): Elaborating entity "and_2seletor_3bits" for hierarchy "ula:uga|BLOCO_raiz:inst7|and_2seletor_3bits:inst1"
+Info (12128): Elaborating entity "RaizQua" for hierarchy "ula:uga|BLOCO_raiz:inst7|RaizQua:inst"
+Info (12128): Elaborating entity "BLOCO_par" for hierarchy "ula:uga|BLOCO_par:inst19"
+Info (12128): Elaborating entity "BLOCO_lt_eq" for hierarchy "ula:uga|BLOCO_lt_eq:inst18"
+Info (12128): Elaborating entity "or_selection_5bits" for hierarchy "ula:uga|or_selection_5bits:inst24"
+Warning (275083): Bus "F1[0]" found using same base name as "F1", which might lead to a name conflict.
+Warning (275083): Bus "F2[0]" found using same base name as "F2", which might lead to a name conflict.
+Warning (275083): Bus "F3[0]" found using same base name as "F3", which might lead to a name conflict.
+Warning (275083): Bus "F4[0]" found using same base name as "F4", which might lead to a name conflict.
+Warning (275083): Bus "F1[1]" found using same base name as "F1", which might lead to a name conflict.
+Warning (275083): Bus "F2[1]" found using same base name as "F2", which might lead to a name conflict.
+Warning (275083): Bus "F3[1]" found using same base name as "F3", which might lead to a name conflict.
+Warning (275083): Bus "F4[1]" found using same base name as "F4", which might lead to a name conflict.
+Warning (275083): Bus "F1[2]" found using same base name as "F1", which might lead to a name conflict.
+Warning (275083): Bus "F2[2]" found using same base name as "F2", which might lead to a name conflict.
+Warning (275083): Bus "F3[2]" found using same base name as "F3", which might lead to a name conflict.
+Warning (275083): Bus "F4[2]" found using same base name as "F4", which might lead to a name conflict.
+Warning (275083): Bus "F1[3]" found using same base name as "F1", which might lead to a name conflict.
+Warning (275083): Bus "F2[3]" found using same base name as "F2", which might lead to a name conflict.
+Warning (275083): Bus "F3[3]" found using same base name as "F3", which might lead to a name conflict.
+Warning (275083): Bus "F4[3]" found using same base name as "F4", which might lead to a name conflict.
+Warning (275083): Bus "F1[4]" found using same base name as "F1", which might lead to a name conflict.
+Warning (275083): Bus "F2[4]" found using same base name as "F2", which might lead to a name conflict.
+Warning (275083): Bus "F3[4]" found using same base name as "F3", which might lead to a name conflict.
+Warning (275083): Bus "F4[4]" found using same base name as "F4", which might lead to a name conflict.
+Warning (275080): Converted elements in bus name "F" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "F[4..0]" to "F4..0"
+Warning (275080): Converted elements in bus name "F1" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "F1[4..0]" to "F14..0"
+Warning (275080): Converted elements in bus name "F2" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "F2[4..0]" to "F24..0"
+Warning (275080): Converted elements in bus name "F3" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "F3[4..0]" to "F34..0"
+Warning (275080): Converted elements in bus name "F4" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "F4[4..0]" to "F44..0"
+Info (12128): Elaborating entity "Display" for hierarchy "Display:buga"
+Info (12128): Elaborating entity "DP_T" for hierarchy "Display:buga|DP_T:inst6"
+Info (12128): Elaborating entity "DEZENA_T" for hierarchy "Display:buga|DEZENA_T:inst3"
+Info (12128): Elaborating entity "soma_1" for hierarchy "Display:buga|soma_1:inst1"
+Info (12128): Elaborating entity "not_5bits" for hierarchy "Display:buga|not_5bits:inst2"
+Info (12128): Elaborating entity "DP_UNIDADE" for hierarchy "Display:buga|DP_UNIDADE:inst5"
+Warning (275011): Block or symbol "AND2" of instance "inst9" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst16" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst21" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst23" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst34" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst36" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst39" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst41" overlaps another block or symbol
+Info (12128): Elaborating entity "UNIDADE-DP7" for hierarchy "Display:buga|UNIDADE-DP7:inst4"
+Info (12128): Elaborating entity "XOR_3Custom" for hierarchy "Display:buga|UNIDADE-DP7:inst4|XOR_3Custom:inst4"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Disp1[6]" is stuck at VCC
+    Warning (13410): Pin "Disp1[2]" is stuck at GND
+    Warning (13410): Pin "Disp1[1]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 100 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 22 output pins
+    Info (21061): Implemented 65 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 54 warnings
+    Info: Peak virtual memory: 4858 megabytes
+    Info: Processing ended: Wed Oct 14 15:19:41 2026
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:24
+
+
